@@ -11,6 +11,16 @@ module.exports = {
             lose && lose(err);
         }
         exec(onSuccess, onError, "PGiAdPlugin", "init", []);
+    },
+    showAd:function(win,lose){
+        function onSuccess(res) {
+            win && win(res);
+        }
+               
+        function onError(err) {
+            lose && lose(err);
+        }
+        exec(onSuccess, onError, "PGiAdPlugin", "showAd", []);
     }
 
 }
